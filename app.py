@@ -1,5 +1,6 @@
 import os
-import time
+from function import end_app
+from function import add_restaurant
 
 print("""
       
@@ -22,18 +23,12 @@ option = int(input('Escolha uma das opções: '))
 print(f'\nOpcao Escolhida: {option}\n')
 
 if option == 1:
-    os.system('cls')
-    print('Operacao Escolhida: Cadastro\n\n')
-    restaurant_name = input('Informe o nome do restaurante: ')
-    restaurant_type = input('Informe o tipo do restaurante(Ex: Hamburgueria): ')
-    os.system('cls')
+    add_restaurant()
 elif option == 2:
     os.system('cls')
     print('Operacao Escolhida: Listagem')
 elif option == 3:
     os.system('cls')
 else:
-    os.system('cls')
-    print('Encerrando...')
-    time.sleep(1.5)
+    end_app()
     
